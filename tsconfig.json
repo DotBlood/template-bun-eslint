@@ -18,19 +18,17 @@
     "types": [
       "bun-types" 
     ],
-    "rootDir": "src",
-    "outDir": "./build",
     "paths": {
       "@/*": [
         "./src/*"
       ],
-      "bin/*": [
+      "@bin/*": [
         "./bin/*"
       ],
-      "cfg/*":[
+      "@cfg/*":[
         "./bin/config/*"
       ],
-      "internal/*":[
+      "@internal/*":[
         "./internal/*"
       ]
     }
