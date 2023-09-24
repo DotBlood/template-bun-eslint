@@ -19,6 +19,7 @@
     "dev": "bun --hot ./src/index.ts",
     "builds": "bun build --minify --splitting --outdir=build ./src/**/* ./bin/**/* ./internal/**/*",
     "lint": "bun lintSrc && bun lintInternal",
+    "lint-fix": "bun lintSrc --fix && bun lintInternal --fix",
     "lintSrc": "bun eslint --config ./bin/linter/.eslintrc.json ./src/**/*",
     "lintInternal": "bun eslint --config ./bin/linter/.eslintrc.json ./internal/**/*"
   },

@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
@@ -11,12 +13,12 @@
     "strict": true,
     "downlevelIteration": true,
     "skipLibCheck": true,
-    // "jsx": "preserve",
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "types": [
-      "bun-types" 
+      "bun-types"
     ],
     "paths": {
       "@/*": [
@@ -25,12 +27,18 @@
       "@bin/*": [
         "./bin/*"
       ],
-      "@cfg/*":[
+      "@config/*": [
         "./bin/config/*"
       ],
-      "@internal/*":[
+      "@internal/*": [
         "./internal/*"
       ]
-    }
+    },
   },
+  "include": [
+    "./src/**/*",
+    "./bin/**/*",
+    "./bin/config/*",
+    "./internal/**/*"
+  ]
 }

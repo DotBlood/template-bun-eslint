@@ -1,5 +1,6 @@
-import getConfig from "@internal/config/config"
+import { CreateNewLogger } from '@internal/logger/logger.ts'
+import { type ILoggerConfig } from '@internal/logger/type.t'
+import loggerConfig from '@config/loggerConfig.json'
 
-getConfig()
-
-console.log(Bun.env.PORT)
+const logger = CreateNewLogger(loggerConfig as ILoggerConfig)
+logger.info("Hi World")

@@ -1,0 +1,5 @@
+{
+    "mode": "prod",
+    "pathToLogsDir": "./bin/logs",
+    "prefix": "BunTemplate"
+}
