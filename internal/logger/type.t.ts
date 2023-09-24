@@ -1,6 +1,6 @@
 export interface ILoggerConfig {
   mode: 'debug' | 'prod' | 'develop'
-  pathToLogsDir: string | './bin/logs'
+  pathToLogsDir: string | undefined
   metadata: object | undefined
   prefix: string | undefined
 }

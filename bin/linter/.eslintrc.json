@@ -4,8 +4,16 @@
     },
     "extends": "standard-with-typescript",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "extraFileExtensions": [
+            ".md"
+        ]
     },
-    "rules": {
-    }
+    "rules": {},
+    "ignorePatterns": [
+        "**/*.md",
+        "**/*.env",
+        ".env",
+        "**/*.log"
+    ]
 }

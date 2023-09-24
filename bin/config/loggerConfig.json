@@ -1,5 +1,6 @@
 {
-    "mode": "prod",
+    "mode": "develop",
+    "prefix": "BunTemplate",
     "pathToLogsDir": "./bin/logs",
-    "prefix": "BunTemplate"
+    "metadata": {}
 }
