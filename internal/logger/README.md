@@ -1,6 +1,6 @@
-# Модуль логгирования
+# Logging Module
 
-Чтобы использовать логгер, вам достаточно вызвать функцию `CreateNewLogger`, а затем передать туда конфиг. Конфиг - это объект, соответствующий следующему интерфейсу:
+To use the logger, you simply need to call the `CreateNewLogger` function and then pass the configuration to it. The configuration is an object that adheres to the following interface:
 
 ```typescript
 interface ILoggerConfig {
@@ -9,20 +9,21 @@ interface ILoggerConfig {
   metadata: object | undefined;
   prefix: string | undefined;
 }
-
-В вашем случае, вы создали loggerConfig в папке bin/config и указали следующие параметры:
-
-```json
-{
-    "mode": "develop",               // Может принимать 'debug' | 'prod' | 'develop'
-    "prefix": "BunTemplate",         // Необязательный тип
-    "pathToLogsDir": "./bin/logs",   // Необязательный тип
-    "metadata": {}                   // Необязательный тип
-}
-
 ```
 
-После этого в файле ./src/index.ts я создал константу logger и теперь могу работать с ним по всему проекту.
+In your case, you created loggerConfig in the bin/config folder and specified the following parameters:
+
+```json
+Copy code
+{
+    "mode": "develop",               // Can take 'debug' | 'prod' | 'develop'
+    "prefix": "BunTemplate",         // Optional
+    "pathToLogsDir": "./bin/logs",   // Optional
+    "metadata": {}                   // Optional
+}
+```
+
+After that, in the ./src/index.ts file, I created a constant logger, and now I can use it throughout the project.
 
 ```typescript
 import { CreateNewLogger } from '@internal/logger/logger.ts'
@@ -30,45 +31,44 @@ import { type ILoggerConfig } from '@internal/logger/type.t'
 import loggerConfig from '@config/loggerConfig.json'
 
 const logger = CreateNewLogger(loggerConfig as ILoggerConfig)
-logger.info("Привет, мир!")
+logger.info("Hello, world!")
 ```
 
-При этом вывод будет исходя из конфигурации выше будет следующим:
+The output will be as follows based on the above configuration:
 
 ```bash
-2023-09-24T19:49:30.179Z [BunTemplate] Level: info | message: Привет, мир!
+2023-09-24T19:49:30.179Z [BunTemplate] Level: info | message: Hello, world!
 ```
 
-При режимах "prod" и "debug":
+In "prod" and "debug" modes:
 
 ```json
 {
-  "message": "Привет, мир!",
+  "message": "Hello, world!",
   "level": "info",
   "label": "BunTemplate",
-  "timestamp": "Сен-24-2023 22:02:41"
+  "timestamp": "Sep-24-2023 22:02:41"
 }
 ```
 
-## Как использовать в проекте
+## How to Use in Your Project
 
-Вы можете создать функцию, которая на входе ожидает логгер: winston.Logger, и просто передавать его туда. Думаю, это удобно, так как у вас один логгер для всего проекта.
+You can create a function that expects a logger of type winston.Logger as input and simply pass it there. I believe this is convenient, as you have one logger for the entire project.
 
-Пример:
+Example:
 
 ```typescript
 function TestFunction(log: winston.Logger){
-  log.info('Я работаю!')
+  log.info('I am working!')
 }
 
 TestFunction(logger)
-
 
 class TestClass{
   constructor(
     private readonly log: winston.Logger
   ){
-    this.log.info('А тут я работаю в классе')
+    this.log.info('And here, I am working in a class')
   }
 }
 
