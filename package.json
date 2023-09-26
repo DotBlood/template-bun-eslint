@@ -22,8 +22,4 @@
     "lintInternal": "bun eslint --config ./bin/linter/.eslintrc.json ./internal/**/*"
   },
   "type": "module",
-  "dependencies": {
-    "winston": "^3.10.0",
-    "zod": "^3.22.2"
-  }
 }
