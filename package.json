@@ -21,5 +21,5 @@
     "lintSrc": "bun eslint --config ./bin/linter/.eslintrc.json ./src/**/*",
     "lintInternal": "bun eslint --config ./bin/linter/.eslintrc.json ./internal/**/*"
   },
-  "type": "module",
+  "type": "module"
 }

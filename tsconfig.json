@@ -30,6 +30,9 @@
       ],
       "@internal/*":[
         "./internal/*"
+      ],
+      "@test/*":[
+        "./test/*"
       ]
     }
   },
