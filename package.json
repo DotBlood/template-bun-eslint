@@ -17,7 +17,6 @@
   "scripts": {
     "start": "bun run ./src/index.ts",
     "dev": "bun --hot ./src/index.ts",
-    "builds": "bun build --minify --splitting --outdir=build ./src/**/* ./bin/**/* ./internal/**/*",
     "lint": "bun lintSrc && bun lintInternal",
     "lintSrc": "bun eslint --config ./bin/linter/.eslintrc.json ./src/**/*",
     "lintInternal": "bun eslint --config ./bin/linter/.eslintrc.json ./internal/**/*"
