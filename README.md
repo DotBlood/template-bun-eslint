@@ -1,38 +1,47 @@
 # BunTenplate
 
-"BunTemplate" - это мой личный шаблон проекта, разработанный с целью облегчения начала работы для любого пользователя. Этот шаблон очень чист и минималистичен, имея всего лишь одну зависимость - ESLint.
+"BunTemplate" is my personal project template, designed to make it easy for any user to get bunty started. This template is very clean and minimalistic with only one dependency, ESLint.
 
-### Структура проекта:
+## Translate: 
+* [**Русский**]("") 
+* [**English**]("")
+
+
+### Project Structure:
 ```vbnet
 📦 App/
-├── 📂 bin/            #(Папка с настройками)  alias "@bin/*"
+├─── 📂 bin/ #(Customization folder) alias "@bin/*"
 │
-├── 📂 internal/       #(Внутренние модули)      alias "@internal/*"
+├─── 📂 internal/ #(Internal modules) alias "@internal/*"
 │
-├── 📂 src/            #(Папка с исходным кодом)    alias "@/*"
+├─── 📂 src/ #(Source code folder) alias "@/*"
 │
-├── 📂 test/           #(Папка с тестами)           alias "@test/*"
+├─── 📂 test/ #(Test folder) alias "@test/*"
 ```
 
-### Команды для работы:
+### Commands to run:
 ```zsh
-bun start # для запуска в продакшн режиме
+bun start # to start in production mode
 
-bun dev # для режима разработчика с включенной поддержкой горячей перезагрузки (hot mode)
+bun dev # for developer mode with hot mode enabled
 
-bun lint # для проверки кода на соответствие стандартам стиля кода
+bun lint # to check code for compliance with code style standards
 ```
 
 
-### Установка
-
+### Installation
 ```zsh
 git clone --depth 1 git@github.com:DotBlood/template-bun-eslint.git 
-
-cd template-bun-eslint
-
-bun i
-
-bun dev
 ```
 
+```zsh
+cd template-bun-eslint
+```
+
+```zsh
+bun i
+```
+
+```zsh
+bun dev
+```
