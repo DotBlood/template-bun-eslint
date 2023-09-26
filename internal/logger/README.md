@@ -14,7 +14,6 @@ interface ILoggerConfig {
 In your case, you created loggerConfig in the bin/config folder and specified the following parameters:
 
 ```json
-Copy code
 {
     "mode": "develop",               // Can take 'debug' | 'prod' | 'develop'
     "prefix": "BunTemplate",         // Optional
