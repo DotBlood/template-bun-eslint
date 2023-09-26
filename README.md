@@ -4,7 +4,7 @@
 
 ## Translate: 
 * [**Русский**](https://github.com/DotBlood/template-bun-eslint/blob/master/bin/docks/README_ru.md) 
-* [**English**]("")
+* [**English**](#)
 
 
 ### Project Structure:
