@@ -31,7 +31,7 @@ bun lint # to check code for compliance with code style standards
 
 ### Installation
 ```zsh
-git clone --depth 1 git@github.com:DotBlood/template-bun-eslint.git 
+git clone --depth 1 [git@github.com:DotBlood/template-bun-eslint.git ](https://github.com/DotBlood/template-bun-eslint.git)
 ```
 
 ```zsh
