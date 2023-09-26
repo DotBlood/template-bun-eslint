@@ -3,7 +3,7 @@
 "BunTemplate" is my personal project template, designed to make it easy for any user to get bunty started. This template is very clean and minimalistic with only one dependency, ESLint.
 
 ## Translate: 
-* [**Русский**]("https://github.com/DotBlood/template-bun-eslint/blob/master/bin/docks/README_ru.md") 
+* [**Русский**](https://github.com/DotBlood/template-bun-eslint/blob/master/bin/docks/README_ru.md) 
 * [**English**]("")
 
 
