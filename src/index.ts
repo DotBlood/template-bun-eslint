@@ -1,26 +1,26 @@
-import { exec } from 'child_process';
+import { exec } from 'child_process'
 
-function openBrowser(url: string) {
-  let command;
+function openBrowser (url: string): void {
+  let command
 
   if (process.platform === 'win32') {
-    command = `start ${url}`;
+    command = `start ${url}`
   } else if (process.platform === 'darwin') {
-    command = `open ${url}`;
+    command = `open ${url}`
   } else {
-    command = `xdg-open ${url}`;
+    command = `xdg-open ${url}`
   }
 
   exec(command, () => {
-    console.log("My name Bun... Bun Bunny!")
-  });
+    console.log('My name Bun... Bun Bunny!')
+  })
 }
 
 const server = Bun.serve({
   port: 3000,
-  fetch() {
-    return new Response("My name Bun... Bun Bunny!")
+  fetch () {
+    return new Response('My name Bun... Bun Bunny!')
   }
 })
 
-openBrowser(`http://${server.hostname}:${server.port}`);
+openBrowser(`http://${server.hostname}:${server.port}`)
