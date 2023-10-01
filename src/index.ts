@@ -19,7 +19,6 @@ function openBrowser (url: string): void {
 const server = Bun.serve({
   port: 3000,
   fetch () {
-    return new Response('My name Bun... Bun Bunny!')
   }
 })
 
